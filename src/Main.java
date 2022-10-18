@@ -4,5 +4,6 @@ public class Main {
 
         SalesManager salesManager = new SalesManager(sales);
         System.out.println(salesManager.max());
+        System.out.println(salesManager.truncatedMean());
     }
 }
