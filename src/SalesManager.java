@@ -15,23 +15,23 @@ public class SalesManager {
         return max;
     }
 
-    public int truncatedMean() {
+    public long truncatedMean() {
         // находим минимальное значение
-        int minValue = sales[0];
-        for (int sale : sales) {
+        long minValue = sales[0];
+        for (long sale : sales) {
             if (sale < minValue) {
                 minValue = sale;
             }
         }
         // находим максимальное значение, используя готовый метод
-        int maxValue = max();
+        long maxValue = max();
         // находим сумму всех продаж
-        int sumOfSales = 0;
-        for (int sale : sales) {
+        long sumOfSales = 0;
+        for (long sale : sales) {
             sumOfSales += sale;
         }
         // находим среднее арифметическое без учета мин и макс значений
-        int truncatedMean = (sumOfSales - minValue - maxValue) / (sales.length - 2);
+        long truncatedMean = (sumOfSales - minValue - maxValue) / (sales.length - 2);
         return truncatedMean;
     }
 }
